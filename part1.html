@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var colors = ["black", "blue", "green", "red", "yellow", "grey", "violet", "brown"];
+    var answer;
+    var user_guess;
+
+    function gamecolor() {
+
+        var colorss = colors.sort().join(", ");
+        var color_number = Math.floor(Math.random() * colors.length);
+
+        answer = colors[color_number];
+        alert("The answer is: " + answer);
+
+        while (user_guess != answer) {
+
+            user_guess = prompt("I'm thinking one of these colors: " + "\n\n" + colorss + "\n\nWhat color am I thinking of?").toLowerCase();
+        }
+    }
+    gamecolor();
+</script>
+</body>
+</html>
